@@ -43,7 +43,9 @@ const Transmission = () => {
                 What is Data Transmission?
               </h2>
               <p className="text-secondary font-poppins leading-relaxed">
-               Once the data is encoded, it is transmitted through a communication channel — such as a wired connection, wireless network, or storage medium.
+                Data transmission is the process of sending encoded data from a source to a destination through 
+                a communication channel. During this journey, data may encounter various types of interference, 
+                noise, and physical limitations that can potentially corrupt the transmitted information.
               </p>
             </section>
 

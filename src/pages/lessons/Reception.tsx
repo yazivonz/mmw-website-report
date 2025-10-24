@@ -41,10 +41,10 @@ const Reception = () => {
                 What is Data Reception?
               </h2>
               <p className="text-secondary font-poppins leading-relaxed mb-4">
-                At the receiving end, the encoded data (which includes both the original bits and the redundant bits) 
-                is collected and stored temporarily for verification. The receiver then applies the same error 
-                detection algorithm used by the sender to recompute what the check bits should be. This ensures that 
-                data integrity can be verified before the system accepts or processes it further.
+                Data reception is the critical stage where the transmitted signal arrives at the destination 
+                and is converted back into digital data. The receiver must capture the signal, synchronize 
+                with it, and prepare it for error checking while dealing with any distortions or noise 
+                accumulated during transmission.
               </p>
 
               <div className="glass p-4 rounded-lg">

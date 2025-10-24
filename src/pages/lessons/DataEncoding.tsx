@@ -42,67 +42,29 @@ const DataEncoding = () => {
                 What is Data Encoding?
               </h2>
               <p className="text-secondary font-poppins leading-relaxed mb-4">
-                Before sending information, the system takes the original data (in binary form) and 
-                processes it to include extra bits called <span className="text-primary font-semibold">error detection bits</span>. 
-                These bits are calculated using a specific error detection method, such as:
+                Data encoding is the first crucial step in error detection where the original data is augmented 
+                with additional bits calculated using mathematical algorithms. These extra bits enable the receiver 
+                to verify data integrity and detect potential errors during transmission or storage.
               </p>
 
-              <ul className="list-disc pl-6 text-secondary font-poppins space-y-2">
-                <li>
-                  <span className="text-accent font-semibold">Parity Bit</span> – ensures even or odd total of 1’s.
-                </li>
-                <li>
-                  <span className="text-accent font-semibold">Checksum</span> – sums the data segments to produce a verification value.
-                </li>
-                <li>
-                  <span className="text-accent font-semibold">Cyclic Redundancy Check (CRC)</span> – divides data by a fixed polynomial and sends the remainder.
-                </li>
-              </ul>
-            </section>
-
-            {/* 🔹 EXISTING CONTENT BELOW (UNCHANGED)
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">The Encoding Process</h2>
-              <div className="space-y-4">
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
-                    1. Input Data Preparation
-                  </h3>
-                  <p className="text-secondary font-poppins">
-                    The original message is converted into binary format if it isn't already. The data is 
-                    organized into blocks or frames of specific sizes depending on the error detection method used.
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
-                    2. Algorithm Selection
-                  </h3>
-                  <p className="text-secondary font-poppins">
-                    Choose the appropriate error detection algorithm based on requirements: parity for simplicity, 
-                    checksum for moderate reliability, CRC for high reliability, or Hamming code for error correction.
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
-                    3. Redundancy Calculation
-                  </h3>
-                  <p className="text-secondary font-poppins">
-                    Mathematical operations are performed on the data to generate redundant bits. This could be 
-                    counting 1s (parity), summing segments (checksum), polynomial division (CRC), or matrix 
-                    multiplication (Hamming).
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
-                    4. Data Concatenation
-                  </h3>
-                  <p className="text-secondary font-poppins">
-                    The calculated redundant bits are appended or inserted at predetermined positions within 
-                    the data stream, creating the final encoded message ready for transmission.
-                  </p>
-                </div>
+              {/* 🔹 HIGHLIGHTED COMMON METHODS SECTION */}
+              <div className="relative p-6 rounded-2xl border-2 border-accent/50 bg-accent/10 shadow-lg backdrop-blur-md">
+                <h3 className="absolute -top-4 left-4 bg-accent text-background px-4 py-1 rounded-full text-sm font-orbitron tracking-wide shadow-md">
+                  Common Methods
+                </h3>
+                <ul className="list-disc pl-6 text-secondary font-poppins space-y-2 mt-4">
+                  <li>
+                    <span className="text-accent font-semibold">Parity Bit</span> – ensures even or odd total of 1’s.
+                  </li>
+                  <li>
+                    <span className="text-accent font-semibold">Checksum</span> – sums the data segments to produce a verification value.
+                  </li>
+                  <li>
+                    <span className="text-accent font-semibold">Cyclic Redundancy Check (CRC)</span> – divides data by a fixed polynomial and sends the remainder.
+                  </li>
+                </ul>
               </div>
-            </section> */}
+            </section>
 
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Encoding Examples</h2>
@@ -115,6 +77,7 @@ const DataEncoding = () => {
                     <p className="text-primary font-bold">Encoded: 10110100 (parity bit = 0)</p>
                   </div>
                 </div>
+
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-lg font-orbitron font-semibold text-primary mb-2">CRC Encoding</h3>
                   <div className="font-mono text-sm space-y-1">
