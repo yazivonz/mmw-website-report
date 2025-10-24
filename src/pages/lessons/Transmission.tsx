@@ -1,4 +1,4 @@
-import { Send, ArrowLeft } from 'lucide-react';
+import { Send, ArrowLeft, Waves, Cpu, Radio, SignalHigh } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
@@ -23,6 +23,7 @@ const Transmission = () => {
         </Button>
 
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-up">
+          {/* Header Section */}
           <div className="text-center mb-12">
             <div className="inline-block p-4 rounded-full bg-primary/20 border-2 border-primary mb-4">
               <Send className="w-16 h-16 text-primary" />
@@ -35,131 +36,137 @@ const Transmission = () => {
             </p>
           </div>
 
-          <Card className="glass-dark p-8 space-y-6">
+          <Card className="glass-dark p-8 space-y-8">
+            {/* What is Data Transmission */}
             <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">What is Data Transmission?</h2>
+              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">
+                What is Data Transmission?
+              </h2>
               <p className="text-secondary font-poppins leading-relaxed">
-                Data transmission is the process of sending encoded data from a source to a destination through 
-                a communication channel. During this journey, data may encounter various types of interference, 
-                noise, and physical limitations that can potentially corrupt the transmitted information.
+               Once the data is encoded, it is transmitted through a communication channel — such as a wired connection, wireless network, or storage medium.
               </p>
             </section>
 
+            {/* Process Flow */}
             <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Types of Transmission</h2>
+              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">
+              During this process, data can be affected by:
+              </h2>
+              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
+             <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
+  <li>
+    <span className="font-semibold text-accent">Electrical Noise: </span> 
+    Random signal fluctuations caused by power or electronic interference.
+  </li>
+  <li>
+    <span className="font-semibold text-accent">Signal Interference: </span> 
+    Overlapping signals that distort or disrupt data transmission.
+  </li>
+  <li>
+    <span className="font-semibold text-accent">Hardware Faults: </span> 
+    Damaged cables or devices causing data loss or corruption.
+  </li>
+  <li>
+    <span className="font-semibold text-accent">Environmental Conditions: </span> 
+    Heat, humidity, or radiation weakening the transmitted signal.
+  </li>
+</ul>
+
+
+              </ul>
+            </section>
+
+            {/* Types of Transmission */}
+            <section>
+              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">
+                Types of Transmission
+              </h2>
               <div className="space-y-4">
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Serial Transmission</h3>
-                  <p className="text-secondary font-poppins">
-                    Data bits are sent one after another in sequence over a single channel. Common in USB, 
-                    Ethernet, and long-distance communications. More reliable over long distances.
-                  </p>
+                <div className="glass p-4 rounded-lg flex items-start gap-3">
+                  <Cpu className="w-6 h-6 text-accent mt-1" />
+                  <div>
+                    <h3 className="text-xl font-orbitron font-semibold text-accent mb-1">
+                      Serial Transmission
+                    </h3>
+                    <p className="text-secondary font-poppins">
+                      Data bits are sent one after another through a single channel. Common in USB, Ethernet, and long-distance communication systems. 
+                      <span className="block text-sm text-primary mt-2">Example: Data transfer between your computer and a USB flash drive.</span>
+                    </p>
+                  </div>
                 </div>
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Parallel Transmission</h3>
-                  <p className="text-secondary font-poppins">
-                    Multiple bits are sent simultaneously over multiple channels. Faster but limited to 
-                    short distances. Used in computer buses and internal connections.
-                  </p>
+                <div className="glass p-4 rounded-lg flex items-start gap-3">
+                  <Waves className="w-6 h-6 text-accent mt-1" />
+                  <div>
+                    <h3 className="text-xl font-orbitron font-semibold text-accent mb-1">
+                      Parallel Transmission
+                    </h3>
+                    <p className="text-secondary font-poppins">
+                      Multiple bits are sent simultaneously over multiple channels. It’s faster but suitable for short distances only. 
+                      <span className="block text-sm text-primary mt-2">Example: Communication between a CPU and RAM in a computer system.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
 
+            {/* Transmission Media
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Transmission Media</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-lg font-orbitron font-semibold text-primary mb-2">Wired Media</h3>
                   <ul className="list-disc list-inside space-y-1 text-secondary font-poppins text-sm">
-                    <li>Twisted Pair Cables (Ethernet)</li>
-                    <li>Coaxial Cables (Cable TV)</li>
-                    <li>Fiber Optic Cables (High-speed)</li>
+                    <li>Twisted Pair Cables — Used in Ethernet LANs</li>
+                    <li>Coaxial Cables — Used in cable TV networks</li>
+                    <li>Fiber Optic Cables — Used for high-speed internet</li>
                   </ul>
                 </div>
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-lg font-orbitron font-semibold text-primary mb-2">Wireless Media</h3>
                   <ul className="list-disc list-inside space-y-1 text-secondary font-poppins text-sm">
-                    <li>Radio Waves (Wi-Fi, Bluetooth)</li>
-                    <li>Microwaves (Satellites)</li>
-                    <li>Infrared (Remote controls)</li>
+                    <li>Radio Waves — Used in Wi-Fi, Bluetooth</li>
+                    <li>Microwaves — Used in satellite communication</li>
+                    <li>Infrared — Used in remote controls</li>
                   </ul>
                 </div>
               </div>
-            </section>
+            </section> */}
 
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Common Transmission Errors</h2>
-              <div className="space-y-4">
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Single-Bit Errors</h3>
-                  <p className="text-secondary font-poppins">
-                    Only one bit in a data unit changes due to brief noise spikes. Most common in serial transmission.
-                  </p>
-                  <p className="text-primary font-mono text-sm mt-2">
-                    Sent: 10110101 → Received: 10111101 (bit 3 flipped)
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Burst Errors</h3>
-                  <p className="text-secondary font-poppins">
-                    Multiple consecutive bits are corrupted. Caused by impulse noise or signal fading.
-                  </p>
-                  <p className="text-primary font-mono text-sm mt-2">
-                    Sent: 10110101 → Received: 10001101 (bits 2-4 corrupted)
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Noise Sources</h2>
-              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
-                <li><span className="font-semibold text-accent">Thermal Noise:</span> Random electron movement in conductors</li>
-                <li><span className="font-semibold text-accent">Crosstalk:</span> Interference from adjacent signal lines</li>
-                <li><span className="font-semibold text-accent">Impulse Noise:</span> Sudden spikes from external sources (lightning, motors)</li>
-                <li><span className="font-semibold text-accent">Attenuation:</span> Signal weakening over distance</li>
-                <li><span className="font-semibold text-accent">Distortion:</span> Signal shape changes due to medium characteristics</li>
-              </ul>
-            </section>
-
+            {/* Transmission Modes
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Transmission Modes</h2>
               <div className="space-y-4">
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Simplex</h3>
                   <p className="text-secondary font-poppins">
-                    One-way communication only (keyboard to computer, broadcast radio).
+                    One-way communication only (e.g., keyboard to CPU or broadcast television).
                   </p>
                 </div>
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Half-Duplex</h3>
                   <p className="text-secondary font-poppins">
-                    Two-way communication, but not simultaneously (walkie-talkies, CB radio).
+                    Two-way communication, but one direction at a time (e.g., walkie-talkies).
                   </p>
                 </div>
                 <div className="glass p-4 rounded-lg">
                   <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">Full-Duplex</h3>
                   <p className="text-secondary font-poppins">
-                    Simultaneous two-way communication (telephone, modern networks).
+                    Simultaneous two-way communication (e.g., telephones and modern computer networks).
                   </p>
                 </div>
               </div>
-            </section>
+            </section> */}
 
+            {/* Real World Example
             <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Why Error Detection Matters</h2>
-              <p className="text-secondary font-poppins mb-4">
-                During transmission, even with the best infrastructure, errors can occur. Error detecting 
-                codes are essential because:
+              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Real-World Application</h2>
+              <p className="text-secondary font-poppins leading-relaxed">
+                When you send a file through email or upload a video to the internet, data transmission happens 
+                through multiple stages and media — converting data into bits, sending it across fiber optics or 
+                wireless networks, and reconstructing it at the destination. Error detection codes ensure your 
+                file arrives intact and unchanged.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
-                <li>No transmission medium is 100% noise-free</li>
-                <li>Long distances amplify error probability</li>
-                <li>Wireless channels are inherently unreliable</li>
-                <li>Critical data (financial, medical) requires guaranteed accuracy</li>
-                <li>Retransmission is expensive in terms of time and bandwidth</li>
-              </ul>
-            </section>
+            </section> */}
           </Card>
         </div>
       </div>

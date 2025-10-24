@@ -118,7 +118,7 @@ const Detection = () => {
               </div>
             </section>
 
-            <section>
+            {/* <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Error Recovery Strategies</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="glass p-4 rounded-lg">
@@ -201,9 +201,9 @@ const Detection = () => {
                 <li><span className="font-semibold text-accent">Reliability:</span> Dramatic improvement in data accuracy (99.9%+ success rate)</li>
                 <li><span className="font-semibold text-accent">CPU Usage:</span> Hardware acceleration makes detection very efficient</li>
               </ul>
-            </section>
+            </section> */}
 
-            <section>
+            {/* <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">The Silent Guardian</h2>
               <div className="glass p-6 rounded-lg border-2 border-primary/50">
                 <p className="text-secondary font-poppins leading-relaxed">
@@ -213,7 +213,7 @@ const Detection = () => {
                   bit of data flowing through the digital world.
                 </p>
               </div>
-            </section>
+            </section> */}
           </Card>
         </div>
       </div>

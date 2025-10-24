@@ -24,33 +24,27 @@ const Navbar = () => {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
       const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsOpen(false);
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-dark shadow-neon' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm ${
+        isScrolled ? 'bg-background/80 shadow-neon' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-orbitron font-bold text-primary animate-pulse-glow">
-              Error Detecting Codes
-            </h1>
-          </div>
+          <h1 className="text-2xl md:text-3xl font-orbitron font-bold text-primary animate-pulse-glow whitespace-nowrap">
+            Error Detecting Codes
+          </h1>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

@@ -46,7 +46,7 @@ const Checking = () => {
               </p>
             </section>
 
-            <section>
+            {/* <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">The Checking Process</h2>
               <div className="space-y-4">
                 <div className="glass p-4 rounded-lg">
@@ -120,7 +120,7 @@ const Checking = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
 
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Error Detection vs. Correction</h2>
@@ -152,7 +152,7 @@ const Checking = () => {
               </div>
             </section>
 
-            <section>
+            {/* <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Performance Metrics</h2>
               <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
                 <li><span className="font-semibold text-accent">Detection Probability:</span> Likelihood of detecting an error when it occurs</li>
@@ -161,9 +161,9 @@ const Checking = () => {
                 <li><span className="font-semibold text-accent">Processing Time:</span> Time required to perform error checking</li>
                 <li><span className="font-semibold text-accent">Throughput Impact:</span> Effect on overall data transfer rate</li>
               </ul>
-            </section>
+            </section> */}
 
-            <section>
+            {/* <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Optimization Strategies</h2>
               <div className="space-y-4">
                 <div className="glass p-4 rounded-lg">
@@ -188,7 +188,7 @@ const Checking = () => {
                   </p>
                 </div>
               </div>
-            </section>
+            </section> */}
 
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">When Errors Are Found</h2>

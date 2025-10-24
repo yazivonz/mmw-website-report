@@ -36,34 +36,56 @@ const DataEncoding = () => {
           </div>
 
           <Card className="glass-dark p-8 space-y-6">
+            {/* 🔹 UPDATED SECTION */}
             <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">What is Data Encoding?</h2>
-              <p className="text-secondary font-poppins leading-relaxed">
-                Data encoding is the first crucial step in error detection where the original data is augmented 
-                with additional bits calculated using mathematical algorithms. These extra bits enable the receiver 
-                to verify data integrity and detect potential errors during transmission or storage.
+              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">
+                What is Data Encoding?
+              </h2>
+              <p className="text-secondary font-poppins leading-relaxed mb-4">
+                Before sending information, the system takes the original data (in binary form) and 
+                processes it to include extra bits called <span className="text-primary font-semibold">error detection bits</span>. 
+                These bits are calculated using a specific error detection method, such as:
               </p>
+
+              <ul className="list-disc pl-6 text-secondary font-poppins space-y-2">
+                <li>
+                  <span className="text-accent font-semibold">Parity Bit</span> – ensures even or odd total of 1’s.
+                </li>
+                <li>
+                  <span className="text-accent font-semibold">Checksum</span> – sums the data segments to produce a verification value.
+                </li>
+                <li>
+                  <span className="text-accent font-semibold">Cyclic Redundancy Check (CRC)</span> – divides data by a fixed polynomial and sends the remainder.
+                </li>
+              </ul>
             </section>
 
+            {/* 🔹 EXISTING CONTENT BELOW (UNCHANGED)
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">The Encoding Process</h2>
               <div className="space-y-4">
                 <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">1. Input Data Preparation</h3>
+                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
+                    1. Input Data Preparation
+                  </h3>
                   <p className="text-secondary font-poppins">
                     The original message is converted into binary format if it isn't already. The data is 
                     organized into blocks or frames of specific sizes depending on the error detection method used.
                   </p>
                 </div>
                 <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">2. Algorithm Selection</h3>
+                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
+                    2. Algorithm Selection
+                  </h3>
                   <p className="text-secondary font-poppins">
                     Choose the appropriate error detection algorithm based on requirements: parity for simplicity, 
                     checksum for moderate reliability, CRC for high reliability, or Hamming code for error correction.
                   </p>
                 </div>
                 <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">3. Redundancy Calculation</h3>
+                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
+                    3. Redundancy Calculation
+                  </h3>
                   <p className="text-secondary font-poppins">
                     Mathematical operations are performed on the data to generate redundant bits. This could be 
                     counting 1s (parity), summing segments (checksum), polynomial division (CRC), or matrix 
@@ -71,14 +93,16 @@ const DataEncoding = () => {
                   </p>
                 </div>
                 <div className="glass p-4 rounded-lg">
-                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">4. Data Concatenation</h3>
+                  <h3 className="text-xl font-orbitron font-semibold text-accent mb-2">
+                    4. Data Concatenation
+                  </h3>
                   <p className="text-secondary font-poppins">
                     The calculated redundant bits are appended or inserted at predetermined positions within 
                     the data stream, creating the final encoded message ready for transmission.
                   </p>
                 </div>
               </div>
-            </section>
+            </section> */}
 
             <section>
               <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Encoding Examples</h2>
@@ -102,41 +126,6 @@ const DataEncoding = () => {
                   </div>
                 </div>
               </div>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Key Considerations</h2>
-              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
-                <li>Trade-off between redundancy overhead and error detection capability</li>
-                <li>Computational complexity and processing time</li>
-                <li>Hardware vs. software implementation requirements</li>
-                <li>Synchronization between sender and receiver on the encoding scheme</li>
-                <li>Efficiency for the expected error patterns in the communication channel</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Benefits of Proper Encoding</h2>
-              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
-                <li>Enables automatic error detection at the receiver</li>
-                <li>Improves overall data reliability</li>
-                <li>Reduces need for retransmissions</li>
-                <li>Provides mathematical guarantee of error detection capability</li>
-                <li>Foundation for building robust communication systems</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-orbitron font-bold text-primary mb-4">Industry Standards</h2>
-              <p className="text-secondary font-poppins mb-4">
-                Various industry standards specify encoding requirements:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-secondary font-poppins">
-                <li>IEEE 802.3 (Ethernet): CRC-32 encoding</li>
-                <li>USB protocol: CRC-5 and CRC-16 encoding</li>
-                <li>JPEG images: Huffman encoding with error resilience</li>
-                <li>QR codes: Reed-Solomon error correction encoding</li>
-              </ul>
             </section>
           </Card>
         </div>
